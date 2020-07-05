@@ -8,10 +8,12 @@ TagManager:
   - orange
   - blue
   - ground
-  - BlueWall
-  - OrangeWall
   - PlatformBoost
   - PlatformJump
+  - BlueMovePlat
+  - OrangeMovePlat
+  - EndBridge
+  - Key
   layers:
   - Default
   - TransparentFX

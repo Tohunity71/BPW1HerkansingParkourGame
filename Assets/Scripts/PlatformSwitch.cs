@@ -12,9 +12,10 @@ public class PlatformSwitch : MonoBehaviour
     List<GameObject> bluelist;
     public GameObject[] blue;
     private bool platformSwitch = true;
+    public bool MP = false;
 
-    string[] Orange = { "OrangeWall", "orange" };
-    string[] Blue = { "BlueWall", "blue" };
+    string[] Orange = { "orange" };
+    string[] Blue = { "blue" };
 
     // Start is called before the first frame update
     void Start()
@@ -60,7 +61,8 @@ public class PlatformSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (platformSwitch == false && Input.GetKeyDown(KeyCode.E))
+        //  Dit zorgt ervoor dat je kan switchen tussen de platformen
+        if (platformSwitch == false && Input.GetKeyDown(KeyCode.E) && MP == false)
         {
             platformSwitch = true;
 
@@ -75,7 +77,7 @@ public class PlatformSwitch : MonoBehaviour
 
             }
         }
-        else if (platformSwitch == true && Input.GetKeyDown(KeyCode.E))
+        else if (platformSwitch == true && Input.GetKeyDown(KeyCode.E) && MP == false)
         {
             platformSwitch = false;
 
